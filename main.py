@@ -11,10 +11,10 @@ from rich.style import Style
 import pystyle
 from pystyle import Colors, Colorate
 
-from cpmtooldev import CPMTooldev
+from harrycpm import HarryCPM
 
-__CHANNEL_USERNAME__ = "BaldanShopChannel"
-__GROUP_USERNAME__   = "BaldanShopChat"
+__CHANNEL_USERNAME__ = "HarryCPMChannel"
+__GROUP_USERNAME__   = "Harrycpmgroup"
 
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
