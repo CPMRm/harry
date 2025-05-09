@@ -196,7 +196,7 @@ if __name__ == "__main__":
             print(Colorate.Horizontal(Colors.rainbow, '{31}: Custom Car Brake         2K'))
             print(Colorate.Horizontal(Colors.rainbow, '{32}: Change Account Email     2K'))
             print(Colorate.Horizontal(Colors.rainbow, '{33}: Unlock Toyota Crown      2K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{34}: Unlock Toyota Crown      1K'))
+            print(Colorate.Horizontal(Colors.rainbow, '{34}: Test       1K'))
             print(Colorate.Horizontal(Colors.rainbow, '{0} : Exit'))
             
             print(Colorate.Horizontal(Colors.rainbow, '===============[ ʙᴀʟᴅᴀɴ ]==============='))
@@ -732,7 +732,7 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
                     sleep(2)
                     continue
-            elif service == 49: # telmunnongonz
+            elif service == 34: # telmunnongonz
                 console.print("[bold]ENTER CAR DETAILS![/bold]")
                 car_id = IntPrompt.ask("[bold][?] CAR ID[/bold]")
                 console.print("[bold]ENTER VALUE FOR STANCE [/bold]")
