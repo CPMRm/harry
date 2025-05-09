@@ -388,5 +388,4 @@ class HarryCPM:
         params = { "key": self.access_key, "car_id": car_id, "custom": custom }
         response = requests.post(f"{__ENDPOINT_URL__}/incline", params=params, data=payload)
         response_decoded = response.json()
-        self.log_action("stance_camber", { "payload": payload, "params": params })
         return response_decoded.get("ok")
