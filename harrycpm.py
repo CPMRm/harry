@@ -382,17 +382,6 @@ class HarryCPM:
         response = requests.post(f"{__ENDPOINT_URL__}/brake_car", params=params, data=payload)
         response_decoded = response.json()
         return response_decoded.get("ok")
-    
-    def telmunnongonz(self, car_id, custom):
-        payload = {
-        "account_auth": self.auth_token,
-        "car_id": car_id,
-        "custom": custom,
-        }
-        params = {"key": self.access_key}
-        response = requests.post(f"{__ENDPOINT_URL__}/telmunnongonz", params=params, data=payload)
-        response_decoded = response.json()
-        return response_decoded.get("ok")
 
     def incline(self, car_id, custom): 
         payload = { "account_auth": self.auth_token, "car_id": car_id, "custom": custom } 
