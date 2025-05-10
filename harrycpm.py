@@ -389,3 +389,13 @@ class HarryCPM:
         response = requests.post(f"{__ENDPOINT_URL__}/incline", params=params, data=payload)
         response_decoded = response.json()
         return response_decoded.get("ok")
+
+    def change_password(self, new_password):
+        payload = { "account_auth": self.auth_token, "new_password": new_password }
+        params = { "key": self.access_key, "new_password": new_password }
+        response = requests.post(f"{__ENDPOINT_URL__}/change_password", params=params, data=payload)
+        response_decoded = response.json()
+        self.log_action("change_password", { "payload": payload, "params": params })
+        if response_decoded.get("new_token"):
+            self.auth_token = response_decoded["new_token"]
+        return response_decoded.get("ok")
