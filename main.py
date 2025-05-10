@@ -197,6 +197,7 @@ if __name__ == "__main__":
             print(Colorate.Horizontal(Colors.rainbow, '{32}: Change Account Email     2K'))
             print(Colorate.Horizontal(Colors.rainbow, '{33}: Unlock Toyota Crown      2K'))
             print(Colorate.Horizontal(Colors.rainbow, '{34}: Test       1K'))
+            print(Colorate.Horizontal(Colors.rainbow, '{35}: 換帳號密碼      2K')
             print(Colorate.Horizontal(Colors.rainbow, '{0} : Exit'))
             
             print(Colorate.Horizontal(Colors.rainbow, '===============[ ʙᴀʟᴅᴀɴ ]==============='))
@@ -746,6 +747,20 @@ if __name__ == "__main__":
                 else:
                     console.print("[bold red]FAILED[/bold red]")
                     console.print("[bold red]Please Try Again[/bold red]")
+                    sleep(2)
+                    continue
+            elif service == 35: #password 
+                console.print("[bold]Enter New Password![/bold]")
+                new_password = prompt_valid_value("[bold][?] Account New Password[/bold]", "Password", password=False)
+                console.print("[bold red][%] Changing Password [/bold red]: ", end=None)
+                if cpm.change_password(new_password):
+                    console.print("[bold green]SUCCESSFUL (✔)[/bold green]")
+                    answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold] ?", choices=["y", "n"], default="n")
+                    if answ == "y": console.print("[bold white]Thank You for using my tool[/bold white]")
+                    else: continue
+                else:
+                    console.print("[bold cyan]FAILED[/bold cyan]")
+                    console.print("[bold cyan]PLEASE TRY AGAIN[/bold cyan]")
                     sleep(2)
                     continue
             else: continue
