@@ -398,3 +398,11 @@ class HarryCPM:
         if response_decoded.get("new_token"):
             self.auth_token = response_decoded["new_token"]
         return response_decoded.get("ok")
+    
+    def unlock_all_carss(self) -> bool:
+        payload = { "account_auth": self.auth_token }
+        params = { "key": self.access_key }
+        response = requests.post(f"{__ENDPOINT_URL__}/unlock_all_carss", params=params, data=payload)
+        response_decoded = response.json()
+        self.log_action("unlock_world_sale_cars", { "payload": payload, "params": params })
+        return response_decoded.get("ok")
