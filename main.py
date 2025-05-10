@@ -197,7 +197,7 @@ if __name__ == "__main__":
             print(Colorate.Horizontal(Colors.rainbow, '{32}: Change Account Email     2K'))
             print(Colorate.Horizontal(Colors.rainbow, '{33}: Unlock Toyota Crown      2K'))
             print(Colorate.Horizontal(Colors.rainbow, '{34}: Test       1K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{35}: 換帳號密碼      2K')
+            print(Colorate.Horizontal(Colors.rainbow, '{35}: 換帳號密碼      2K'))
             print(Colorate.Horizontal(Colors.rainbow, '{0} : Exit'))
             
             print(Colorate.Horizontal(Colors.rainbow, '===============[ ʙᴀʟᴅᴀɴ ]==============='))
